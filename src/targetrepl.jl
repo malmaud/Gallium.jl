@@ -21,7 +21,7 @@ function createTargetREPL(dbg)
     end
   end
 
-  const target = Dict{Any,Any}(
+  target = Dict{Any,Any}(
        '\\' => function (s,args...)
            if isempty(s) || position(LineEdit.buffer(s)) == 0
                buf = copy(LineEdit.buffer(s))

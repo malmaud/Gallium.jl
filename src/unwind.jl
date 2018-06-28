@@ -82,7 +82,7 @@ function compute_register_states(s, base, mod, r, stacktop, ::Void)
     isa(mod, Module) && (ciecache = mod.ciecache)
     cie::CIE, ccoff = realize_cieoff(fde, ciecache)
     # Compute CFA
-    target_delta::UInt64 = modrel - loc - (stacktop?0:1)
+    target_delta::UInt64 = modrel - loc - (stacktop ? 0 : 1)
     @assert target_delta < UInt(CallFrameInfo.fde_range(fde, cie))
     #out = IOContext(STDOUT, :reg_map => Gallium.X86_64.dwarf_numbering)
     #drs = CallFrameInfo.RegStates()

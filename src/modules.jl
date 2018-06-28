@@ -378,7 +378,7 @@ module GlibcDyldModules
       crc = read(debuglink, UInt32)
       # Now search for this file in the same locations as GDB
       execdir = dirname(filename)
-      const globaldir = "/usr/lib/debug"
+      globaldir = "/usr/lib/debug"
       for path in [execdir, joinpath(execdir,".debug"),
                    # For /usr/lib/..., /usr/lib/debug/usr/lib/...
                    joinpath(globaldir, execdir[2:end])]

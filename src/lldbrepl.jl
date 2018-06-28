@@ -30,7 +30,7 @@ function RunLLDBRepl(dbg)
 
     push!(mirepl.interface.modes,panel)
 
-    const lldb_keymap = Dict{Any,Any}(
+    lldb_keymap = Dict{Any,Any}(
         '`' => function (s,args...)
             if isempty(s)
                 if !haskey(s.mode_state,panel)

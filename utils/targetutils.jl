@@ -45,4 +45,5 @@ If a debugger, is not present proceed as usual.
 """
 breakpoint() = try
     ccall(:jl_raise_debugger, Int, ())
+catch
 end
